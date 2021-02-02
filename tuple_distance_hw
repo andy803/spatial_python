@@ -1,0 +1,22 @@
+import math
+pointTuple = ("001",25.0,36.0,"002",32.0,48.0,"003",39.0,42.0,"004",45.0,46.0,"005",52.0,44.0)
+i = 0
+for i in range(4):
+    print(pointTuple[i] ,pointTuple[i+1],pointTuple[i+2])
+    i = i + 1
+    
+#pointTuple = ("001",25.0,36.0,"002",32.0,48.0,"003",39.0,42.0,"004",45.0,46.0,"005",52.0,44.0)
+xAverage=0
+yAverage=0
+xAverage=(sum(pointTuple[1:14:3])/len(pointTuple[1:14:3]))
+print("X Average is "+str(xAverage))
+yAverage=(sum(pointTuple[2:15:3])/len(pointTuple[2:15:3]))
+print("Y Average is "+str(yAverage))
+
+def calDistance(i,j,k,l):
+    distance = 0
+    distance = math.sqrt(((k-i)*(k-i))+((l-j)*(l-j)))
+    print("The distance between the two points is " + str(distance))
+
+calDistance(6,1,2,3)
+            
